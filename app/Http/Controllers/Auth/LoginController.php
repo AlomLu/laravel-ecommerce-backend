@@ -10,4 +10,7 @@ class LoginController extends Controller
     public function showLogin(){
         return view('user.auth.login');
      }
+    public function adminShowLogin(){
+        return view('admin.auth.login');
+     }
 }

@@ -50,7 +50,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Admin
-Route::get('/admin', [AdminHomeController::class, 'index'])->name('home');
+Route::get('/admin-dashboard', [AdminHomeController::class, 'index'])->name('admin-dashboard');
+Route::get('/admin-login', [LoginController::class, 'adminShowLogin'])->name('admin-login');
+Route::get('/admin-signup', [RegisterController::class, 'adminShowSignup'])->name('admin-signup');
 
 Route::get('/add-category', [CategoryController::class, 'showAddCategory'])->name('add-category');
 Route::get('/category-list', [CategoryController::class, 'showCategoryList'])->name('category-list');

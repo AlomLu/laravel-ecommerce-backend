@@ -10,4 +10,7 @@ class RegisterController extends Controller
     public function showSignup(){
         return view('user.auth.signup');
      }
+    public function adminShowSignup(){
+        return view('admin.auth.signup');
+     }
 }

@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+h2, h3, h4, h5{
+    margin-bottom: 0;
+}
+p{
+    margin-bottom: 0;
+}
+label {
+	margin-bottom: 2px;
+	text-transform: capitalize;
+	font-size: 15px;
+}
+
+/* Login area start */
+.login-area {
+	padding: 100px 0px 100px 0px;
+}
+.login {
+	border: 1px solid #ddd;
+	width: 40%;
+	margin: 0 auto;
+	padding: 30px 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.login h4{
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.login .form-inline {
+	margin-bottom: 25px;
+}
+.login .form-inline input[type="submit"]{
+    margin-top: 5px;
+}
+.forgot-pass {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.forgot-pass a, .create-account a {
+	padding: 3px 0;
+	color: #000;
+    transition: .9s;
+}
+.forgot-pass a:hover, .create-account a:hover{
+    color: #d22b0f;
+}
+.create-account {
+	text-align: center;
+}
+/* Login area end */
+
+/* Forget-pass area start */
+.forget-pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.forget-pass .card {
+    width: 40%;
+}
+.card-body{
+}
+.forget-pass .card-title {
+	border-bottom: 1px solid #ddd;
+	padding: 30px 0px;
+	margin-bottom: 0;
+}
+.forget-pass .card-text {
+	padding: 30px 0px;
+	border-bottom: 1px solid #ddd;
+}
+.forget-pass .card input {
+	margin: 30px 0px;
+	padding: 10px 0px 10px 2px;
+}
+.forget-pass .card input.form-control:focus{
+    outline: none;
+	box-shadow: none;
+	border-color: #2B2D42;
+    transition: all 0.3s ease;
+}
+.forget-pass .btn-group{
+    float: right;
+    padding-bottom: 40px;
+}
+.forget-pass .btn-group .btn.cancel {
+	margin-right: 10px;
+	padding: 5px 20px;
+	border-radius: 4px !important;
+}
+.forget-pass .btn-group .btn.search{
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+/* Forget-pass area end */
+
+/* Signup area start */
+.signup-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 80px 0px;
+}
+.signup-area .card{
+    width: 50%;
+}
+.signup-area .card-title{
+    padding: 20px 0px;
+    text-align: center;
+}
+.signup-area .gender{
+    margin-right: 10px;
+}
+/* .signup-area .form-group{
+    margin-bottom: 25px;
+} */
+/* .signup-area .birthday, .division, .district, .upazila, .union-parishad{
+    width: 40%;
+} */
+.signup-area input[type="submit"]{
+    margin-bottom: 20px;
+}
+.signup-area .have-an-account {
+	text-align: center;
+}
+.signup-area .have-an-account a {
+	color: #000;
+	padding: 5px 0px;
+    transition: .9s;
+}
+.signup-area .have-an-account a:hover{
+    color: #d22b0f;
+}
+.form-inline {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.form-inline-gender {
+    width: 100%;
+}
+/* Signup area end */
+

@@ -21,7 +21,7 @@
                 <div class="Typeahead Typeahead--twitterUsers">
                     <div class="u-posRelative">
                         <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
-                            placeholder="Search Fastkart .." name="q" title="" autofocus>
+                            placeholder="Search.." name="q" title="" autofocus>
                         <i class="close-search" data-feather="x"></i>
                         <div class="spinner-border Typeahead-spinner" role="status">
                             <span class="sr-only">Loading...</span>
@@ -81,6 +81,11 @@
                 <li>
                     <div class="mode">
                         <i class="ri-moon-line"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div class="mode">
+                        <a href="{{route('admin-signup')}}"><i class="fa-solid fa-user" style="color: #4A5568"></i></a> 
                     </div>
                 </li>
                 <li class="profile-nav onhover-dropdown pe-0 me-0">

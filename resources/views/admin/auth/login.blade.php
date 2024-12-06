@@ -1,4 +1,4 @@
-@extends("user.layout.MasterApp")
+@extends("admin.layout.MasterApp")
 @section("content")
         <!-- Login area start -->
         <div class="login-area">
