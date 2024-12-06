@@ -1,8 +1,20 @@
 <?php
 
+
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\CouponController;
+use App\Http\Controllers\Admin\OrderDetailController;
+use App\Http\Controllers\Admin\AdminProductController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SupportTicketController;
+use App\Http\Controllers\Admin\UserController;
+
 use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\Dashboard\AccountDeleteController;
@@ -36,6 +48,37 @@ use Illuminate\Support\Facades\Route;
 //     return view('user.auth.signup');
 //     // return view('user.home.test');
 // });
+
+// Admin
+Route::get('/admin', [AdminHomeController::class, 'index'])->name('home');
+
+Route::get('/add-category', [CategoryController::class, 'showAddCategory'])->name('add-category');
+Route::get('/category-list', [CategoryController::class, 'showCategoryList'])->name('category-list');
+
+Route::get('/order-detail', [OrderDetailController::class, 'showOrderDetails'])->name('order-details');
+Route::get('/order-list', [OrderController::class, 'showOrderList'])->name('order-list');
+
+Route::get('/add-product', [AdminProductController::class, 'showAddProduct'])->name('add-product');
+Route::get('/product-list', [AdminProductController::class, 'showProductList'])->name('product-list');
+Route::get('/product-review', [AdminProductController::class, 'showProductReview'])->name('product-review');
+
+Route::get('/create-roles', [RoleController::class, 'showCreateRoles'])->name('create-roles');
+Route::get('/all-roles', [RoleController::class, 'showAllRoles'])->name('all-roles');
+
+Route::get('/create-coupons', [CouponController::class, 'showCreateCoupon'])->name('create-coupons');
+Route::get('/coupon-list', [CouponController::class, 'showCouponList'])->name('coupon-list');
+
+
+Route::get('/add-user', [UserController::class, 'showAddUser'])->name('add-user');
+Route::get('/all-user', [UserController::class, 'showAllUser'])->name('all-user');
+
+Route::get('/support-ticket', [SupportTicketController::class, 'showSupportTicket'])->name('support-ticket');
+
+Route::get('/admin-profile', [SettingController::class, 'showProfile'])->name('profile');
+
+
+// User
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::get('/signup', [RegisterController::class, 'showSignup'])->name('signup');
