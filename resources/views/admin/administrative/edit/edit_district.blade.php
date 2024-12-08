@@ -10,12 +10,10 @@
                             <div class="card-body">
                                 <div class="card-header-2">
                                     <h5>Add District</h5>
-                                    @if(session('success'))
-                                    <span>{{session('success')}}</span>
-                                    @endif
+                                   
                                 </div>
 
-                                <form action="{{route('add.district')}}" method="POST" class="theme-form theme-form-2 mega-form" id="">
+                                <form action="{{route('update.district')}}" method="POST" class="theme-form theme-form-2 mega-form" id="">
                                     @csrf
                                     <div class="successMsg">
 
@@ -24,8 +22,12 @@
                                         <label class="form-label-title col-sm-3 mb-0">District Name</label>
                                         <div class="col-sm-9">
                                             <input class="form-control" name="dis_name" id="dis_name" type="text"
-                                                placeholder="District name">
+                                                value="{{$district->dis_name}}">
+                                                @if ($errors->has('dis_name'))
+                                                    <span class="text-danger">{{$errors->first('dis_name')}}</span>
+                                                @endif
                                                 <span class="text-danger dis_name_err"></span>
+                                            <input type="hidden" name="dis_id" value="{{$district->id}}">
                                         </div>
                                     </div>
                                     <div class="mb-4 row align-items-center">
@@ -37,9 +39,12 @@
                                                     <option value="{{$division->id}}">{{$division->div_name}}</option>
                                                 @endforeach
                                             </select>
+                                            @if ($errors->has('division_id'))
+                                                <span class="text-danger">{{$errors->first('division_id')}}</span>
+                                            @endif
                                         </div>
                                     </div>
-                                    <input type="submit" class="btn btn-success"  value="Submit">
+                                    <input type="submit" class="btn btn-success"  value="Update">
                                     
                                 </form>
                             </div>

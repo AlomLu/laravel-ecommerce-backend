@@ -146,11 +146,11 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="">Add District</a>
+                                <a href="{{route('district')}}">Add District</a>
                             </li>
 
                             <li>
-                                <a href="">District List</a>
+                                <a href="{{route('district.list')}}">District List</a>
                             </li>
                         </ul>
                     </li>

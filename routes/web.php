@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\Administrative\AdministrativeController;
+use App\Http\Controllers\Administrative\DistrictController;
 use App\Http\Controllers\Administrative\DivisionController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
@@ -85,6 +86,13 @@ Route::get('/division', [DivisionController::class, 'showDivision'])->name('divi
 Route::post('/add-division', [DivisionController::class, 'addDivision'])->name('add.division');
 Route::post('/update-division', [DivisionController::class, 'updateDivision'])->name('update.division');
 Route::post('/delete-division', [DivisionController::class, 'deleteDivision'])->name('delete.division');
+
+Route::get('/district', [DistrictController::class, 'district'])->name('district');
+Route::get('/district-list', [DistrictController::class, 'districtList'])->name('district.list');
+Route::get('/edit-district/{id}', [DistrictController::class, 'showEditDistrict'])->name('edit.district');
+Route::post('/add-district', [DistrictController::class, 'addDistrict'])->name('add.district');
+Route::post('/update-district', [DistrictController::class, 'updateDistrict'])->name('update.district');
+Route::delete('/district/{id}', [DistrictController::class, 'deleteDistrict'])->name('delete.district');
 
 
 // User
