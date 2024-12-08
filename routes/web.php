@@ -1,6 +1,8 @@
 <?php
 
 
+use App\Http\Controllers\Administrative\AdministrativeController;
+use App\Http\Controllers\Administrative\DivisionController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -50,33 +52,39 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Admin
-Route::get('/admin-dashboard', [AdminHomeController::class, 'index'])->name('admin-dashboard');
-Route::get('/admin-login', [LoginController::class, 'adminShowLogin'])->name('admin-login');
-Route::get('/admin-signup', [RegisterController::class, 'adminShowSignup'])->name('admin-signup');
+Route::get('/admin-dashboard', [AdminHomeController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin-login', [LoginController::class, 'adminShowLogin'])->name('admin.login');
+Route::get('/admin-signup', [RegisterController::class, 'adminShowSignup'])->name('admin.signup');
 
-Route::get('/add-category', [CategoryController::class, 'showAddCategory'])->name('add-category');
-Route::get('/category-list', [CategoryController::class, 'showCategoryList'])->name('category-list');
+Route::get('/add-category', [CategoryController::class, 'showAddCategory'])->name('add.category');
+Route::get('/category-list', [CategoryController::class, 'showCategoryList'])->name('category.list');
 
-Route::get('/order-detail', [OrderDetailController::class, 'showOrderDetails'])->name('order-details');
-Route::get('/order-list', [OrderController::class, 'showOrderList'])->name('order-list');
+Route::get('/order-detail', [OrderDetailController::class, 'showOrderDetails'])->name('order.details');
+Route::get('/order-list', [OrderController::class, 'showOrderList'])->name('order.list');
 
-Route::get('/add-product', [AdminProductController::class, 'showAddProduct'])->name('add-product');
-Route::get('/product-list', [AdminProductController::class, 'showProductList'])->name('product-list');
-Route::get('/product-review', [AdminProductController::class, 'showProductReview'])->name('product-review');
+Route::get('/add-product', [AdminProductController::class, 'showAddProduct'])->name('add.product');
 
-Route::get('/create-roles', [RoleController::class, 'showCreateRoles'])->name('create-roles');
-Route::get('/all-roles', [RoleController::class, 'showAllRoles'])->name('all-roles');
+Route::get('/products', [AdminProductController::class, 'showProductList'])->name('products');
+Route::get('/product-review', [AdminProductController::class, 'showProductReview'])->name('product.review');
 
-Route::get('/create-coupons', [CouponController::class, 'showCreateCoupon'])->name('create-coupons');
-Route::get('/coupon-list', [CouponController::class, 'showCouponList'])->name('coupon-list');
+Route::get('/create-roles', [RoleController::class, 'showCreateRoles'])->name('create.roles');
+Route::get('/all-roles', [RoleController::class, 'showAllRoles'])->name('all.roles');
+
+Route::get('/create-coupons', [CouponController::class, 'showCreateCoupon'])->name('create.coupons');
+Route::get('/coupon-list', [CouponController::class, 'showCouponList'])->name('coupon.list');
 
 
-Route::get('/add-user', [UserController::class, 'showAddUser'])->name('add-user');
-Route::get('/all-user', [UserController::class, 'showAllUser'])->name('all-user');
+Route::get('/add-user', [UserController::class, 'showAddUser'])->name('add.user');
+Route::get('/all-user', [UserController::class, 'showAllUser'])->name('all.user');
 
-Route::get('/support-ticket', [SupportTicketController::class, 'showSupportTicket'])->name('support-ticket');
+Route::get('/support-ticket', [SupportTicketController::class, 'showSupportTicket'])->name('support.ticket');
 
 Route::get('/admin-profile', [SettingController::class, 'showProfile'])->name('profile');
+
+Route::get('/division', [DivisionController::class, 'showDivision'])->name('division');
+Route::post('/add-division', [DivisionController::class, 'addDivision'])->name('add.division');
+Route::post('/update-division', [DivisionController::class, 'updateDivision'])->name('update.division');
+Route::post('/delete-division', [DivisionController::class, 'deleteDivision'])->name('delete.division');
 
 
 // User
@@ -86,7 +94,7 @@ Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::get('/signup', [RegisterController::class, 'showSignup'])->name('signup');
 Route::get('/forgot-password', [ForgotPasswordController::class, 'showForgotPassword'])->name('forgot-password');
 
-Route::get('/products', [ProductController::class, 'showProductList'])->name('product-list');
+Route::get('/product-list', [ProductController::class, 'showProductList'])->name('product-list');
 // ROute::get('/products/{id}', [ProductController::class, 'showProductDetails'])->name('products.show');
 Route::get('/product-details', [ProductController::class, 'showProductDetails'])->name('product-details');
 

@@ -85,7 +85,7 @@
                 </li>
                 <li> 
                     <div class="mode">
-                        <a href="{{route('admin-signup')}}"><i class="fa-solid fa-user" style="color: #4A5568"></i></a> 
+                        <a href="{{route('admin.signup')}}"><i class="fa-solid fa-user" style="color: #4A5568"></i></a> 
                     </div>
                 </li>
                 <li class="profile-nav onhover-dropdown pe-0 me-0">

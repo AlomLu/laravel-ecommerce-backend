@@ -30,7 +30,7 @@
                     <li class="back-btn"></li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav" href="{{route('admin-dashboard')}}">
+                        <a class="sidebar-link sidebar-title link-nav" href="{{route('admin.dashboard')}}">
                             <i class="ri-home-line"></i>
                             <span>Dashboard</span>
                         </a>
@@ -43,12 +43,12 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{route('add-product')}}">Prodcts</a>
+                                <a href="{{route('add.product')}}">Add New Products</a>
+                            </li>
+                            <li>
+                                <a href="{{route('products')}}">Prodcts</a>
                             </li>
 
-                            <li>
-                                <a href="{{route('product-list')}}">Add New Products</a>
-                            </li>
                         </ul>
                     </li>
 
@@ -59,11 +59,11 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{route('add-category')}}">Category List</a>
+                                <a href="{{route('add.category')}}">Add New Category</a>
                             </li>
 
                             <li>
-                                <a href="{{route('category-list')}}">Add New Category</a>
+                                <a href="{{route('category.list')}}">Category List</a>
                             </li>
                         </ul>
                     </li>
@@ -75,10 +75,10 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{route('all-user')}}">All users</a>
+                                <a href="{{route('add.user')}}">Add new user</a>
                             </li>
                             <li>
-                                <a href="{{route('add-user')}}">Add new user</a>
+                                <a href="{{route('all.user')}}">All users</a>
                             </li>
                         </ul>
                     </li>
@@ -90,10 +90,10 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{route('all-roles')}}">All roles</a>
+                                <a href="{{route('create.roles')}}">Create Role</a>
                             </li>
                             <li>
-                                <a href="{{route('create-roles')}}">Create Role</a>
+                                <a href="{{route('all.roles')}}">All roles</a>
                             </li>
                         </ul>
                     </li>
@@ -105,10 +105,10 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{route('order-list')}}">Order List</a>
+                                <a href="{{route('order.list')}}">Order List</a>
                             </li>
                             <li>
-                                <a href="{{route('order-details')}}">Order Detail</a>
+                                <a href="{{route('order.details')}}">Order Detail</a>
                             </li>
                         </ul>
                     </li>
@@ -120,24 +120,65 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{route('coupon-list')}}">Coupon List</a>
+                                <a href="{{route('coupon.list')}}">Coupon List</a>
                             </li>
 
                             <li>
-                                <a href="{{route('create-coupons')}}">Create Coupon</a>
+                                <a href="{{route('create.coupons')}}">Create Coupon</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-list">
+                        <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>Division</span>
+                        </a>
+                        <ul class="sidebar-submenu">
+                            <li>
+                                <a href="{{route('division')}}">Add Division</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-list">
+                        <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>District</span>
+                        </a>
+                        <ul class="sidebar-submenu">
+                            <li>
+                                <a href="">Add District</a>
+                            </li>
+
+                            <li>
+                                <a href="">District List</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-list">
+                        <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>Upazila</span>
+                        </a>
+                        <ul class="sidebar-submenu">
+                            <li>
+                                <a href="">Add Upazila</laa>
+                            </li>
+
+                            <li>
+                                <a href="">Upazi List</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav" href="{{route('product-review')}}">
+                        <a class="sidebar-link sidebar-title link-nav" href="{{route('product.review')}}">
                             <i class="ri-star-line"></i>
                             <span>Product Review</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav" href="{{route('support-ticket')}}">
+                        <a class="sidebar-link sidebar-title link-nav" href="{{route('support.ticket')}}">
                             <i class="ri-phone-line"></i>
                             <span>Support Ticket</span>
                         </a>
