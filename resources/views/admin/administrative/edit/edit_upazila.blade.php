@@ -12,7 +12,7 @@
                                     <h5>Add Upazila</h5>
                                 </div>
 
-                                <form action="{{route('add.upazila')}}" method="POST" class="theme-form theme-form-2 mega-form" id="">
+                                <form action="{{route('update.upazila')}}" method="POST" class="theme-form theme-form-2 mega-form" id="">
                                     @csrf
                                     <div class="mb-4 row align-items-center">
                                         <label class="form-label-title col-sm-3 mb-0">Division Name</label>
@@ -23,6 +23,9 @@
                                                     <option value="{{$division->id}}">{{$division->div_name}}</option>
                                                 @endforeach
                                             </select>
+                                            @if ($errors->has('division_id'))
+                                                <span class="text-danger">{{$errors->first('division_id')}}</span>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="mb-4 row align-items-center">
@@ -31,14 +34,20 @@
                                             <select name="district_id" id="distric_id">
                                                 <option value="">Select district</option>
                                             </select>
+                                            @if ($errors->has('district_id'))
+                                                <span class="text-danger">{{$errors->first('district_id')}}</span>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="mb-4 row align-items-center">
                                         <label class="form-label-title col-sm-3 mb-0">Upazila Name</label>
                                         <div class="col-sm-9">
                                             <input class="form-control" name="upazila_name" id="upazila_name" type="text"
-                                                placeholder="Upazila name">
-                                                <span class="text-danger dis_name_err"></span>
+                                                value="{{$upazila->upazila_name}}">
+                                                <input type="hidden" name="upazila_id" value="{{$upazila->id}}">
+                                                @if($errors->has('upazila_name'))
+                                                    <span class="text-danger">{{$errors->first('upazila_name')}}</span>
+                                                @endif
                                         </div>
                                     </div>
                                     <input type="submit" class="btn btn-success"  value="Submit">

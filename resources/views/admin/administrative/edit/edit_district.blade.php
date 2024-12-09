@@ -10,7 +10,11 @@
                             <div class="card-body">
                                 <div class="card-header-2">
                                     <h5>Add District</h5>
-                                   
+                                   <div class="alert alert-success">
+                                        @if ('session')
+                                            {{'session'}}
+                                        @endif
+                                   </div>
                                 </div>
 
                                 <form action="{{route('update.district')}}" method="POST" class="theme-form theme-form-2 mega-form" id="">
@@ -26,7 +30,6 @@
                                                 @if ($errors->has('dis_name'))
                                                     <span class="text-danger">{{$errors->first('dis_name')}}</span>
                                                 @endif
-                                                <span class="text-danger dis_name_err"></span>
                                             <input type="hidden" name="dis_id" value="{{$district->id}}">
                                         </div>
                                     </div>

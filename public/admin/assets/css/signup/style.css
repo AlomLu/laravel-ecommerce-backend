@@ -153,5 +153,12 @@ label {
 .form-inline-gender {
     width: 100%;
 }
+.alert {
+	border-radius: .15rem;
+	padding: 0px;
+	background: #fff !important;
+	color: green !important;
+	border: 0;
+}
 /* Signup area end */
 

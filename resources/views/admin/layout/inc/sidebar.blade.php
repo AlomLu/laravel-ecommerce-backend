@@ -161,11 +161,11 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="">Add Upazila</laa>
+                                <a href="{{route('upazila')}}">Add Upazila</laa>
                             </li>
 
                             <li>
-                                <a href="">Upazi List</a>
+                                <a href="{{route('upazila.list')}}">Upazi List</a>
                             </li>
                         </ul>
                     </li>

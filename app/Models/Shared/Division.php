@@ -14,4 +14,9 @@ class Division extends Model
     {
         return $this->hasMany(District::class);
     }
+
+    public function upazila(): HasMany
+    {
+        return $this->hasMany(Upazila::class);
+    }
 }

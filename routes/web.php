@@ -4,6 +4,7 @@
 use App\Http\Controllers\Administrative\AdministrativeController;
 use App\Http\Controllers\Administrative\DistrictController;
 use App\Http\Controllers\Administrative\DivisionController;
+use App\Http\Controllers\Administrative\UpazilaController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -93,6 +94,15 @@ Route::get('/edit-district/{id}', [DistrictController::class, 'showEditDistrict'
 Route::post('/add-district', [DistrictController::class, 'addDistrict'])->name('add.district');
 Route::post('/update-district', [DistrictController::class, 'updateDistrict'])->name('update.district');
 Route::delete('/district/{id}', [DistrictController::class, 'deleteDistrict'])->name('delete.district');
+
+Route::get('/upazila', [UpazilaController::class, 'upazila'])->name('upazila');
+Route::post('/division-districts', [UpazilaController::class, 'districtList'])->name('division.districs');
+Route::post('/add-upazila', [UpazilaController::class, 'addUpazila'])->name('add.upazila');
+Route::get('/upazila-list', [UpazilaController::class, 'upazilaList'])->name('upazila.list');
+Route::get('/edit-upazila/{id}', [UpazilaController::class, 'editUpazila'])->name('edit.upazila');
+Route::post('/update-upazila', [UpazilaController::class, 'updateUpazila'])->name('update.upazila');
+Route::delete('/upazila/{id}', [UpazilaController::class, 'deleteUpazila'])->name('delete.upazila');
+
 
 
 // User
