@@ -67,6 +67,21 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="sidebar-list">
+                        <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                            <i class="ri-list-check-2"></i>
+                            <span>Sub Category</span>
+                        </a>
+                        <ul class="sidebar-submenu">
+                            <li>
+                                <a href="{{route('sub.category')}}">Add New Sub Category</a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('sub-category.list')}}">Sub Category List</a>
+                            </li>
+                        </ul>
+                    </li>
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title" href="javascript:void(0)">

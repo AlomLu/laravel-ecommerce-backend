@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\Administrative\AdministrativeController;
 use App\Http\Controllers\Administrative\DistrictController;
 use App\Http\Controllers\Administrative\DivisionController;
@@ -64,6 +65,14 @@ Route::get('/category-list', [CategoryController::class, 'showCategoryList'])->n
 Route::get('/edit-category/{id}', [CategoryController::class, 'showEditCategory'])->name('edit.category');
 Route::post('/update-category', [CategoryController::class, 'updateCategory'])->name('update.category');
 Route::delete('/delete-category/{id}', [CategoryController::class, 'deleteCategory'])->name('delete.category');
+
+Route::get('/sub-category', [SubCategoryController::class, 'subCategory'])->name('sub.category');
+Route::get('/sub-category-list', [SubCategoryController::class, 'subCategoryList'])->name('sub-category.list');
+Route::post('/add-sub-category', [SubCategoryController::class, 'addSubCategory'])->name('add.sub-category');
+Route::get('/edit-sub-category/{id}', [SubCategoryController::class, 'editSubCategory'])->name('edit.sub-category');
+Route::post('/update-sub-category', [SubCategoryController::class, 'updateSubCategory'])->name('update.sub-category');
+Route::delete('/sub-category/{id}', [SubCategoryController::class, 'deleteSubCategory'])->name('delete.sub-category');
+
 
 Route::get('/order-detail', [OrderDetailController::class, 'showOrderDetails'])->name('order.details');
 Route::get('/order-list', [OrderController::class, 'showOrderList'])->name('order.list');
