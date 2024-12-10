@@ -59,7 +59,7 @@
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{route('add.category')}}">Add New Category</a>
+                                <a href="{{route('category')}}">Add New Category</a>
                             </li>
 
                             <li>

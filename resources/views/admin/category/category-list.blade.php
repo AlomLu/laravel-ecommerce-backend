@@ -8,8 +8,13 @@
                 <div class="card-body">
                     <div class="title-header option-title">
                         <h5>All Category</h5>
+                        <div class="alert alert-success">
+                            @if (session('status'))
+                                {{session('status')}}
+                            @endif
+                        </div>
                         <form class="d-inline-flex">
-                            <a href="add-new-category.html"
+                            <a href="{{route('category')}}"
                                 class="align-items-center btn btn-theme d-flex">
                                 <i data-feather="plus-square"></i>Add New
                             </a>
@@ -21,61 +26,39 @@
                             <table class="table all-package theme-table" id="table_id">
                                 <thead>
                                     <tr>
-                                        <th>Product Name</th>
-                                        <th>Date</th>
-                                        <th>Product Image</th>
-                                        <th>Icon</th>
-                                        <th>Slug</th>
-                                        <th>Option</th>
+                                        <th>Serial No.</th>
+                                        <th>Category Name</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
+                                    @foreach ($categories as $key => $category)
                                     <tr>
-                                        <td>Aata Buscuit</td>
-
-                                        <td>26-12-2021</td>
-
-                                        <td>
-                                            <div class="table-image">
-                                                <img src="assets/images/product/1.png" class="img-fluid"
-                                                    alt="">
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="category-icon">
-                                                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg"
-                                                    class="img-fluid" alt="">
-                                            </div>
-                                        </td>
-
-                                        <td>buscuit</td>
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$category->cat_name}}</td>
 
                                         <td>
                                             <ul>
                                                 <li>
-                                                    <a href="order-detail.html">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="javascript:void(0)">
+                                                    <a href="{{route('edit.category', $category->id)}}">
                                                         <i class="ri-pencil-line"></i>
                                                     </a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModalToggle">
-                                                        <i class="ri-delete-bin-line"></i>
-                                                    </a>
+                                                    <form action="{{route('delete.category', $category->id)}}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button>
+                                                            <i class="ri-delete-bin-line" style="color: red"></i>
+                                                        </button>
+                                                    </form>
                                                 </li>
                                             </ul>
                                         </td>
                                     </tr>
-
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

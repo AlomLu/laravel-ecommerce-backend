@@ -58,8 +58,12 @@ Route::get('/admin-dashboard', [AdminHomeController::class, 'index'])->name('adm
 Route::get('/admin-login', [LoginController::class, 'adminShowLogin'])->name('admin.login');
 Route::get('/admin-signup', [RegisterController::class, 'adminShowSignup'])->name('admin.signup');
 
-Route::get('/add-category', [CategoryController::class, 'showAddCategory'])->name('add.category');
+Route::get('/category', [CategoryController::class, 'category'])->name('category');
+Route::post('/add-category', [CategoryController::class, 'addCategory'])->name('add.category');
 Route::get('/category-list', [CategoryController::class, 'showCategoryList'])->name('category.list');
+Route::get('/edit-category/{id}', [CategoryController::class, 'showEditCategory'])->name('edit.category');
+Route::post('/update-category', [CategoryController::class, 'updateCategory'])->name('update.category');
+Route::delete('/delete-category/{id}', [CategoryController::class, 'deleteCategory'])->name('delete.category');
 
 Route::get('/order-detail', [OrderDetailController::class, 'showOrderDetails'])->name('order.details');
 Route::get('/order-list', [OrderController::class, 'showOrderList'])->name('order.list');
@@ -102,6 +106,7 @@ Route::get('/upazila-list', [UpazilaController::class, 'upazilaList'])->name('up
 Route::get('/edit-upazila/{id}', [UpazilaController::class, 'editUpazila'])->name('edit.upazila');
 Route::post('/update-upazila', [UpazilaController::class, 'updateUpazila'])->name('update.upazila');
 Route::delete('/upazila/{id}', [UpazilaController::class, 'deleteUpazila'])->name('delete.upazila');
+
 
 
 
